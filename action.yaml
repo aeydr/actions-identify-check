@@ -1,8 +1,6 @@
-name: "Identity"
+name: "CICommon Identity"
 description: |
-  A composite action to run a shell script with a message argument
-  to verify that permissions are working as expected when sourcing
-  the image.
+  A composite action to run a shell script with a message.
 author: aeydr
 
 branding:
