@@ -1,0 +1,25 @@
+name: "Identity"
+description: |
+  A composite action to run a shell script with a message argument
+  to verify that permissions are working as expected when sourcing
+  the image.
+author: aeydr
+
+branding:
+  icon: arrow-up-circle
+  color: red
+
+inputs:
+  message:
+    description: |
+      The message to echo      
+    required: true
+    default: "Hello, World!"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Execute
+      shell: bash
+      id: exec
+      run: ${{github.action_path}}/execute.sh "${{ inputs.message }}"
